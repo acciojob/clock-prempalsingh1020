@@ -15,18 +15,21 @@ let time_date = new Date();
 	let s = time_date.getSeconds();
 
 	let d = time_date.getDate();
-	let m = time_date.getMonth();
+	let m = time_date.getMonth()+1;
 	let y = time_date.getFullYear();
 
 	// let d = d<10?"0":d;
 	 m = m<10?"0"+m:m;
      mi = mi<10?"0"+mi:mi;
+	s = s < 10 ? "0" + s : s;
+
+	
 	str = `${d}/${m}/${y}, ${h}:${mi}:${s}`;
 	para.innerText = str;
 
 	// /function call after 1 second;
 	setTimeout(()=>{
-		ClockTimer()
+		ClockTimer();
 	},1000);
 	
 }
@@ -40,4 +43,3 @@ ClockTimer();
 	
 
 	
-}
