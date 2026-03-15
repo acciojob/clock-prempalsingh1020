@@ -23,8 +23,11 @@ let time_date = new Date();
      mi = mi<10?"0"+mi:mi;
 	s = s < 10 ? "0" + s : s;
 
+	let ap = h>=12?"AM":"PM";
 	
-	str = `${d}/${m}/${y}, ${h}:${mi}:${s}`;
+
+	
+	str = `${d}/${m}/${y}, ${h}:${mi}:${s} ${ap}`;
 	para.innerText = str;
 
 	// /function call after 1 second;
