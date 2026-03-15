@@ -24,7 +24,9 @@ let time_date = new Date();
 	s = s < 10 ? "0" + s : s;
 
 	let ap = h>=12?"AM":"PM";
-	
+
+	h = h%12;
+	h = h?h:12
 
 	
 	str = `${d}/${m}/${y}, ${h}:${mi}:${s} ${ap}`;
