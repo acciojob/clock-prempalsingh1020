@@ -25,7 +25,9 @@ let time_date = new Date();
 	para.innerText = str;
 
 	// /function call after 1 second;
-	setTimeout(ClockTimer(),1000);
+	setTimeout(()=>{
+		ClockTimer()
+	},1000);
 	
 }
 
